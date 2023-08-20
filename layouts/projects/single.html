@@ -1,0 +1,21 @@
+{{ define "header" }}
+    {{ with .Params.Logo }}<img src="/images/logos/{{ . }}" width="100%" alt="{{ .Title }}" />{{ else }}
+        <div class="title">{{ .Title }}</div>
+        <span>{{ .Description }}</span>
+        {{ with .Params }}{{ if or .Homepage .Package .Documentation .Repository}}
+        <nav>
+            <ul>
+                {{ with .Homepage }}<li><a href="{{ . }}">Homepage</a></li>{{ end }}
+                {{ with .Package }}<li><a href="{{ . }}">Package</a></li>{{ end }}
+                {{ with .Documentation }}<li><a href="{{ . }}">Documentation</a></li>{{ end }}
+                {{ with .Repository }}<li><a href="{{ . }}">Repository</a></li>{{ end }}
+            </ul>
+        </nav>
+        {{ end }}{{ end }}
+        {{ if .Params.Deprecated }}<div class="warning">This project is deprecated and I will no longer work on it. Sorry!</div>{{ end }}
+    {{ end }}
+{{ end }}
+
+{{ define "main" }}
+    {{ .Content }}
+{{ end }}

@@ -1,0 +1,6 @@
+{{ define "header" }}
+    {{ partial "header/title" . }}
+    <i>Published on {{ .PublishDate | time.Format ":date_full" }}</i>
+{{ end }}
+
+{{ define "main" }} {{ .Content }} {{ end }}

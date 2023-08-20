@@ -1,0 +1,18 @@
+{{ define "header" }}
+    <div class="title">{{ .Title }}</div>
+    {{ with .Params }}
+    {{ with .Author }}<b>Written by {{ . | markdownify }}</b> {{ end }}
+    {{ if or .Calories .Servings .Prep_Time .Cook_Time }}
+    <ul>
+        {{ with .Calories }}<li>Calories: {{ . }} kcal</li>{{ end }}
+        {{ with .Servings }}<li>Servings: {{ . }}</li>{{ end }}
+        {{ with .Prep_Time }}<li>Prep time: {{ . }} minutes</li>{{ end }}
+        {{ with .Cook_Time }}<li>Cook time: {{ . }} minutes</li>{{ end }}
+        {{ with (add (int .Prep_Time) (int .Cook_Time)) }}<li>Total time: {{ . }} minutes</li>{{ end }}
+    </ul>{{ end }}
+    {{ end }}
+{{ end }}
+
+{{ define "main" }}
+    {{ .Content }}
+{{ end }}

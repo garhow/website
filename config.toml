@@ -1,0 +1,16 @@
+baseURL = 'http://mersh.com/'
+title = 'mersh.com'
+copyright = 'The content for this site is published under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license.'
+languageCode =  'en-us'
+contentDir = 'content/'
+rssLimit = 20
+
+[author]
+	name = 'Garrett Howard'
+	email = 'garrett@mersh.com'
+    github = 'garhow'
+    sudomemo = '5C48A97065F1D04B@DSi'
+
+[params]
+    description = 'Programming, games, and more'
+    source = 'https://github.com/garhow/website/'

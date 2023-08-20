@@ -1,0 +1,56 @@
+{{ define "header" }}
+    <div class="media-info">
+        <div>
+            {{ "<!-- Game title and completion badge -->" | safeHTML }}
+            <div class="title">
+                <span>{{ .Title }}</span>
+                {{ if .Params.Completed }}
+                    {{- if .Params.Mastered -}}
+                        <div class="badge-ribbon badge-mastered" title="I 100% completed this game"></div>
+                    {{- else -}}
+                        <div class="badge-ribbon badge-completed" title="I finished this game"></div>
+                    {{- end -}}
+                {{ end }}
+            </div>
+
+            {{ "<!-- Star rating -->" | safeHTML }}
+            {{- with .Params.Rating }}
+            {{ $rating := div (float .) 2 -}}
+            <div>
+                <span class="star star-full">{{- range seq $rating -}}★{{- end -}}</span>
+                {{- if in $rating ".5" -}}
+                    <span class="star star-half">★</span>
+                {{- end -}}
+                {{ if lt $rating 5 -}}
+                    <span class="star star-empty">
+                        {{- range seq (sub $rating 5) -}}★{{- end -}}
+                    </span>
+                {{- end }}
+            </div>
+            {{- end }}
+
+            {{ "<!-- Other information -->" | safeHTML }}
+            <ul>
+                {{ with .Params.Release_Date }}<li>Released on {{ dateFormat "02 January 2006" . }}</li>{{ end }}
+                {{ with .Params.Developers }}<li>Developed by {{ delimit . ", " }}</li>{{ end }}
+                {{ with .Params.Publishers }}<li>Published by {{ delimit . ", " }}</li>{{ end }}
+            </ul>
+            <ul>
+                {{ with .Params.Platforms }}<li>I have this game on {{ delimit . ", " }}</li>{{ end }}
+                {{ with .Params.Play_Date }}<li>I first played this game on {{ dateFormat "02 January 2006" . }}</li>{{ end }}
+                {{ with .Params.Completion_Date }}<li>I finished this game on {{ dateFormat "02 January 2006" . }}</li>{{ end }}
+                {{ with .Params.Mastery_Date }}<li>I completed this game 100% on {{ dateFormat "02 January 2006" . }}</li>{{ end }}
+            </ul>
+        </div>
+
+        {{ "<!-- Cover art -->" | safeHTML }}
+        {{ with .Resources.Get "cover" -}}
+            {{- $image := (.Resize "x160").Fill "120x160 center" -}}
+            <img class="media-cover" src="{{ $image.RelPermalink }}" alt="{{ .Title }} cover art"></img>
+        {{- end }}
+    </div>
+{{ end }}
+
+{{ define "main" }}
+    {{- .Content -}}
+{{ end }}

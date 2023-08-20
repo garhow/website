@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <ul>
+    {{ range .Pages }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Description }} {{ if .Params.Deprecated }}<small>(deprecated)</small>{{ end }}</li>
+    {{ end }}
+  </ul>
+{{ end }}

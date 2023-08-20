@@ -1,0 +1,17 @@
+<div id="map" data-latitude='{{ .Get "lat" }}' data-longitude='{{ .Get "long" }}' data-zoom='{{ if .Get "zoom" }}{{ .Get "zoom" }}{{ else }}15{{ end }}'></div>
+<script type="text/javascript">
+    const coordinates = [
+        document.getElementById("map").dataset.latitude,
+        document.getElementById("map").dataset.longitude
+    ];
+
+    const zoom = document.getElementById("map").dataset.zoom;
+
+    var map = L.map('map').setView(coordinates, zoom);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+</script>
+<noscript>You can look at a map of this place if you enable JavaScript!</noscript>

@@ -1,0 +1,8 @@
+<meta charset="utf-8">
+<meta name="title" content="{{ .Page.Title }}">
+<meta name="description" content="{{ .Site.Params.Description }}">
+{{ with .Page.Keywords }}<meta name="keywords" content='{{ delimit . "," }}'>{{ end }}
+<meta name="author" content="{{ .Site.Author.name }}">
+<meta name="color-scheme" content="only light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Page.Title }}</title>

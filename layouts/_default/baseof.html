@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "head/meta" . }}
+    {{ partial "head/resources" . }}
+    {{ block "style" . }}{{ end }}
+    {{ block "script" . }}{{ end }}
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        {{ block "header" . -}}
+          {{ partial "header/title" . }}
+        {{- end }}
+      </header>
+      <main>
+        {{ block "main" . -}}{{- end }}
+      </main>
+      <footer>
+        <small>
+          {{ partial "footer/copyright" . }}
+          {{ partial "footer/source" . }}
+          {{ partial "footer/update" . }}
+        </small>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+{{ define "header" }}
+    <div class="title site-title">{{ .Site.Title }}</div>
+{{ end }}
+
+{{ define "main" -}}
+        {{- if ( where .Site.RegularPages.ByTitle "Section" "posts" ) }}
+        {{ "<!-- Recent posts -->" | safeHTML }}
+        <section>
+            <h2>Recent posts</h2>
+            <nav>
+                <ul>
+                    {{ range (where .Site.RegularPages "Section" "posts") }}
+                        <li><span>{{ .PublishDate | time.Format "02 January 2006" }}</span> - <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </section>
+        {{ end }}
+
+        {{- if ( where .Site.RegularPages.ByTitle "Section" "projects" ) }}
+        {{ "<!-- Software projects -->" | safeHTML }}
+        <section>
+            <h2>Software projects</h2>
+            <p>I spend a lot of my time writing software, usually with Rust or Godot. Here are some of my latest projects!</p>
+            <nav>
+                <ul>
+                    {{- range (and (where .Site.RegularPages "Section" "projects") (where .Site.RegularPages ".Params.Deprecated" false) | first 5) }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Params.Description }}</li>
+                    {{- end }}
+                </ul>
+            </nav>
+            {{ with ref . "projects" }}<p>You can find a full list of my software projects <a href='{{ . }}'>here</a>.</p>{{ end }}
+        </section>
+        {{ end }}
+
+        {{- if ( where .Site.RegularPages.ByTitle "Section" "recipes" ) }}
+        {{ "<!-- Recipes -->" | safeHTML }}
+        <section>
+            <h2>Recipes</h2>
+            <p>The recipes that I host on my site are vegan, gluten-free, soy-free, and oil-free. Here are some of the latest recipes that I have added to the site!</p>
+            <nav>
+                <ul>
+                    {{- range (where .Site.RegularPages "Section" "recipes" | first 5) }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{- end }}
+                </ul>
+            </nav>
+            {{ with ref . "recipes" }}<p>You can find a full collection of these recipes <a href='{{ . }}'>here</a>.</p>{{ end }}
+        </section>
+        {{ end }}
+
+        {{- if ( where .Site.RegularPages.ByTitle "Section" "games" ) }}
+        {{ "<!-- Games -->" | safeHTML }}
+        <section>
+            <h2>Games</h2>
+            <p>I play video games when I find the time! If you would like to play with me, feel free to add me on the following platforms:</p>
+            <ul>
+                <li>Nintendo Switch - <code>SW-1733-0857-8496</code></li>
+                <li>Nintendo 3DS - <code>2896-4199-2111</code></li>
+                <li>Nintendo Wii <small>(Wiimmfi)</small> - <code>6771-0364-9107-5373</code></li>
+                <li>Steam - <a href="https://steamcommunity.com/id/garrhow/">mersh</a></li>
+                <li>Xbox Live - <a href="https://account.xbox.com/en-us/profile?gamertag=ghoward007">ghoward007</a></li>
+            </ul>
+            {{ with ref . "games" }}<p>I also have a list of the games that I have played <a href="{{ . }}">here</a> if you want to read it, but the list is incomplete right now.</p>{{ end }}
+        </section>
+        {{ end }}
+
+        {{- if ( where .Site.RegularPages.ByTitle "Section" "travels" ) }}
+        {{ "<!-- Travels -->" | safeHTML }}
+        <section>
+            <h2>Travels</h2>
+            <nav>
+                <ul>
+                    {{- range (where .Site.RegularPages "Section" "travels" | first 10) }}
+                    <li><span>{{ .PublishDate | time.Format "January 2006" }}</span> - <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{- end }}
+                </ul>
+            </nav>
+        </section>
+        {{ end }}
+
+        {{ "<!-- Miscellaneous -->" | safeHTML }}
+        <section>
+            <h2>Miscellaneous</h2>
+            <nav>
+                <ul>
+                    {{ with .Site.Author.email }}<li><a href="mailto:{{ . }}">Contact me</a></li>{{ end }}
+                    {{ with ref . "friends" }}<li><a href="{{ . }}">My friends' websites</a></li>{{ end }}
+                    <li><a href="https://www.github.com/{{ .Site.Author.github }}">My GitHub profile</a></li>
+                    <li><a href="https://www.sudomemo.net/user/{{ .Site.Author.sudomemo }}/">My Sudomemo profile</a></li>
+                </ul>
+            </nav>
+        </section>
+{{ end }}

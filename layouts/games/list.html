@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <div class="media-grid">
+    {{ range sort .Pages "Params.Release_Date" "desc" -}}
+      {{ printf "<!-- %s -->" .Title | safeHTML }}
+      <a href="{{ .Permalink }}">
+      {{ with .Resources.Get "cover" -}}
+        {{ $image := (.Resize "x400 webp q90").Fill "300x400 center" }}
+        <img class="media-cover" src="{{ $image.RelPermalink }}" alt="{{ .Title }} cover art"></img>
+      {{- else -}} <b>{{ .Title }}</b> {{- end }}
+      </a>
+    {{ end -}}
+  </div>
+{{ end }}
