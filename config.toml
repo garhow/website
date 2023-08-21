@@ -1,4 +1,4 @@
-baseURL = 'http://www.mersh.com/'
+baseURL = 'https://www.mersh.com/'
 title = 'mersh.com'
 copyright = 'The content for this site is published under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license.'
 languageCode =  'en-us'
