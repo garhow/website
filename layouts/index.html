@@ -21,7 +21,6 @@
         {{ "<!-- Software projects -->" | safeHTML }}
         <section>
             <h2>Software projects</h2>
-            <p>I spend a lot of my time writing software, usually with Rust or Godot. Here are some of my latest projects!</p>
             <nav>
                 <ul>
                     {{- range (and (where .Site.RegularPages "Section" "projects") (where .Site.RegularPages ".Params.Deprecated" false) | first 5) }}
@@ -29,7 +28,7 @@
                     {{- end }}
                 </ul>
             </nav>
-            {{ with ref . "projects" }}<p>You can find a full list of my software projects <a href='{{ . }}'>here</a>.</p>{{ end }}
+            {{ with ref . "projects" }}<p>You can find a full list <a href='{{ . }}'>here</a>.</p>{{ end }}
         </section>
         {{ end }}
 
@@ -37,7 +36,7 @@
         {{ "<!-- Recipes -->" | safeHTML }}
         <section>
             <h2>Recipes</h2>
-            <p>The recipes that I host on my site are vegan, gluten-free, soy-free, and oil-free. Here are some of the latest recipes that I have added to the site!</p>
+            <p>The recipes that I host on my site are vegan, gluten-free, soy-free, and oil-free. Here are some of the latest recipes that I have added to the site:</p>
             <nav>
                 <ul>
                     {{- range (where .Site.RegularPages "Section" "recipes" | first 5) }}
@@ -53,7 +52,7 @@
         {{ "<!-- Games -->" | safeHTML }}
         <section>
             <h2>Games</h2>
-            <p>I play video games when I find the time! If you would like to play with me, feel free to add me on the following platforms:</p>
+            <p>I play video games when I find the time. If you want to play with me, feel free to add me on the following platforms:</p>
             <ul>
                 <li>Nintendo Switch - <code>SW-1733-0857-8496</code></li>
                 <li>Nintendo 3DS - <code>2896-4199-2111</code></li>
@@ -85,7 +84,7 @@
             <nav>
                 <ul>
                     {{ with .Site.Author.email }}<li><a href="mailto:{{ . }}">Contact me</a></li>{{ end }}
-                    {{ with ref . "friends" }}<li><a href="{{ . }}">My friends' websites</a></li>{{ end }}
+                    {{ with ref . "bookmarks" }}<li><a href="{{ . }}">My bookmarks</a></li>{{ end }}
                     <li><a href="https://www.github.com/{{ .Site.Author.github }}">My GitHub profile</a></li>
                     <li><a href="https://www.sudomemo.net/user/{{ .Site.Author.sudomemo }}/">My Sudomemo profile</a></li>
                 </ul>

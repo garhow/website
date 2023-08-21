@@ -11,3 +11,4 @@ draft: false
 - [Drew DeVault](https://drewdevault.com/)
 - [Cassidy James Blaede](https://cassidyjames.com/blog/)
 - [Koos Looijesteijn](https://www.kooslooijesteijn.net/)
+- [Seirdy](https://seirdy.one/)
