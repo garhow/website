@@ -5,7 +5,7 @@
       <a href="{{ .Permalink }}">
       {{ with .Resources.Get "cover" -}}
         {{ $image := (.Resize "x400 webp q90").Fill "300x400 center" }}
-        <img class="media-cover" src="{{ $image.RelPermalink }}" alt="{{ .Title }} cover art"></img>
+        <img class="media-cover" src="{{ $image.RelPermalink }}" alt="{{ .Title }}"></img>
       {{- else -}} <b>{{ .Title }}</b> {{- end }}
       </a>
     {{ end -}}
