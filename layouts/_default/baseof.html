@@ -12,11 +12,13 @@
         {{ block "header" . -}}
           {{ partial "header/title" . }}
         {{- end }}
+	<hr/>
       </header>
       <main>
         {{ block "main" . -}}{{- end }}
       </main>
       <footer>
+	<hr/>
         <small>
           {{ partial "footer/copyright" . }}
           {{ partial "footer/source" . }}

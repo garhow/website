@@ -1,22 +1,22 @@
 {{ define "header" }}
     <div class="media-info">
         <div>
-            {{ "<!-- Game title and completion badge -->" | safeHTML }}
-            <div class="title">
-                <span>{{ .Title }}</span>
-                {{ if .Params.Completed }}
-                    {{- if .Params.Mastered -}}
-                        <div class="badge-ribbon badge-mastered" title="I 100% completed this game"></div>
-                    {{- else -}}
-                        <div class="badge-ribbon badge-completed" title="I finished this game"></div>
-                    {{- end -}}
-                {{ end }}
-            </div>
+            {{ "<!-- Game title -->" | safeHTML }}
+            <h1>{{ .Title }}</h1>
+
+            <div>
+            {{ "<!-- Completion badge -->" | safeHTML }}
+            {{ if .Params.Completed }}
+                {{- if .Params.Mastered -}}
+                    <span class="badge-ribbon badge-mastered" title="I 100% completed this game"></span>
+                {{- else -}}
+                    <span class="badge-ribbon badge-completed" title="I finished this game"></span>
+                {{- end -}}
+            {{ end }}
 
             {{ "<!-- Star rating -->" | safeHTML }}
             {{- with .Params.Rating }}
             {{ $rating := div (float .) 2 -}}
-            <div>
                 <span class="star star-full">{{- range seq $rating -}}★{{- end -}}</span>
                 {{- if in $rating ".5" -}}
                     <span class="star star-half">★</span>
@@ -46,7 +46,7 @@
         {{ "<!-- Cover art -->" | safeHTML }}
         {{ with .Resources.Get "cover" -}}
             {{- $image := (.Resize "x160").Fill "120x160 center" -}}
-            <img class="media-cover" src="{{ $image.RelPermalink }}" alt="{{ .Title }} cover art"></img>
+            <img class="media-cover" src="{{ $image.RelPermalink }}" alt="An image of the game's cover art"></img>
         {{- end }}
     </div>
 {{ end }}

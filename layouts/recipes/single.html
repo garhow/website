@@ -1,5 +1,5 @@
 {{ define "header" }}
-    <div class="title">{{ .Title }}</div>
+    <h1>{{ .Title }}</h1>
     {{ with .Params }}
     {{ with .Author }}<b>Written by {{ . | markdownify }}</b> {{ end }}
     {{ if or .Calories .Servings .Prep_Time .Cook_Time }}

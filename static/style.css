@@ -36,6 +36,9 @@ body {
     /* Set background size */
     background-position: center 0px;
 
+    /* Set font color */
+    color: #444;
+
     /* Set font family */
     font-family: "Comic Relief", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: larger;
@@ -50,19 +53,8 @@ figure img { border-radius: 0.5rem; width: 100%; }
 
 figcaption p { margin: 0; }
 
-footer {
-    border-top: 1px solid var(--border-color);
-    padding-top: 0.5em;
-}
-
-header {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5em;
-}
-
-h2 {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.2em;
+h1 {
+    margin: 0px;
 }
 
 hr { color: var(--border-color); }
@@ -81,6 +73,7 @@ hr { color: var(--border-color); }
     background: black;
     height: 1em;
     width: 1em;
+    top: -0.35em;
     border-radius: 50px;
 }
 
@@ -166,17 +159,6 @@ a .media-cover:hover { opacity: 0.6 }
     background: linear-gradient(to right, var(--accent-color) 50%, var(--dim-color) 50%);
     background-clip: text;
     color: transparent;
-}
-
-.title {
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.site-title {
-    color: var(--accent-color);
-    font-size: min(max(14vw, 2em), 4em);
-    text-align: center;
 }
 
 .warning { color: red; font-weight: bold; }

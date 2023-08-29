@@ -1,6 +1,6 @@
 {{ define "header" }}
     {{ with .Params.Logo }}<img src="/images/logos/{{ . }}" width="100%" alt="{{ .Title }}" />{{ else }}
-        <div class="title">{{ .Title }}</div>
+        <h1>{{ .Title }}</h1>
         <span>{{ .Description }}</span>
         {{ with .Params }}{{ if or .Homepage .Package .Documentation .Repository}}
         <nav>

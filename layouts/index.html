@@ -1,5 +1,5 @@
 {{ define "header" }}
-    <div class="title site-title">{{ .Site.Title }}</div>
+    <h1 align="center" style="color: var(--accent-color); font-size: min(max(14vw, 2em), 4em);">{{ .Site.Title }}</h1>
 {{ end }}
 
 {{ define "main" -}}
@@ -15,6 +15,7 @@
                 </ul>
             </nav>
         </section>
+	<hr/>
         {{ end }}
 
         {{- if ( where .Site.RegularPages.ByTitle "Section" "projects" ) }}
@@ -30,6 +31,7 @@
             </nav>
             {{ with ref . "projects" }}<p>You can find a full list <a href='{{ . }}'>here</a>.</p>{{ end }}
         </section>
+	<hr/>
         {{ end }}
 
         {{- if ( where .Site.RegularPages.ByTitle "Section" "recipes" ) }}
@@ -46,6 +48,7 @@
             </nav>
             {{ with ref . "recipes" }}<p>You can find a full collection of these recipes <a href='{{ . }}'>here</a>.</p>{{ end }}
         </section>
+	<hr/>
         {{ end }}
 
         {{- if ( where .Site.RegularPages.ByTitle "Section" "games" ) }}
@@ -62,7 +65,8 @@
             </ul>
             {{ with ref . "games" }}<p>I also have a list of the games that I have played <a href="{{ . }}">here</a> if you want to read it, but the list is incomplete right now.</p>{{ end }}
         </section>
-        {{ end }}
+	<hr/>
+	{{ end }}
 
         {{- if ( where .Site.RegularPages.ByTitle "Section" "travels" ) }}
         {{ "<!-- Travels -->" | safeHTML }}
@@ -76,6 +80,7 @@
                 </ul>
             </nav>
         </section>
+	<hr/>
         {{ end }}
 
         {{ "<!-- Miscellaneous -->" | safeHTML }}
