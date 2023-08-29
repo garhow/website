@@ -131,9 +131,6 @@ hr { color: var(--border-color); }
 
 .media-cover {
     aspect-ratio: 3 / 4;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: none;
     border-radius: 8px;
     width: 100%;
     transition: 0.2s all;

@@ -16,6 +16,6 @@ series: "Animal Crossing"
 genres: ["simulation"]
 played: true
 play_date: 2022-11-04
-rating: 5 # out of 10
+rating: 9
 ---
 
