@@ -8,7 +8,6 @@ title: "Halo Combat Evolved"
 release_date: 2001-11-15
 platforms:
 - "Xbox"
-- "Steam"
 developers: 
 - "Bungie"
 publishers:
@@ -16,6 +15,7 @@ publishers:
 series: "Halo"
 genres: ["action", "adventure", "shooter"]
 played: true
+play_date: 2023-09-24
 completed: false
 mastered: false
 rating: 10 # out of 10

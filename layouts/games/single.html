@@ -1,10 +1,10 @@
 {{ define "header" }}
     <div class="media-info">
         <div>
+            <div>
             {{ "<!-- Game title -->" | safeHTML }}
             <h1>{{ .Title }}</h1>
 
-            <div>
             {{ "<!-- Completion badge -->" | safeHTML }}
             {{ if .Params.Completed }}
                 {{- if .Params.Mastered -}}
@@ -26,8 +26,8 @@
                         {{- range seq (sub $rating 5) -}}★{{- end -}}
                     </span>
                 {{- end }}
-            </div>
             {{- end }}
+            </div>
 
             {{ "<!-- Other information -->" | safeHTML }}
             <ul>
@@ -48,7 +48,6 @@
             {{- $image := (.Resize "x160").Fill "120x160 center" -}}
             <img class="media-cover" src="{{ $image.RelPermalink }}" alt="An image of the game's cover art"></img>
         {{- end }}
-    </div>
 {{ end }}
 
 {{ define "main" }}
