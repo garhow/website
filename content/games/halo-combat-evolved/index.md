@@ -7,8 +7,8 @@ resources:
 title: "Halo Combat Evolved"
 release_date: 2001-11-15
 platforms:
+- "Xbox"
 - "Steam"
-- "Xbox Series S"
 developers: 
 - "Bungie"
 publishers:
