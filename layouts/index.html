@@ -3,6 +3,16 @@
 {{ end }}
 
 {{ define "main" -}}
+        <!-- Gorilla Tag 2D Advertisement -->
+        <section>
+            <h2>Play my friend's new game</h2>
+            <iframe frameborder="0" src="https://itch.io/embed/2294740" scrolling="no" width="100%" height="167">
+                <a href="https://cormemory.itch.io/gorilla-tag-2d">Gorilla Tag 2D by CorMemory</a>
+            </iframe>
+            <p>Watch how he created the game <a href="https://www.youtube.com/watch?v=L85xl1DThn0">here</a>.</p>
+            <hr>
+        </section>
+
         {{- if ( where .Site.RegularPages.ByTitle "Section" "posts" ) }}
         {{ "<!-- Recent posts -->" | safeHTML }}
         <section>
