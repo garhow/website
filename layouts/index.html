@@ -3,16 +3,6 @@
 {{ end }}
 
 {{ define "main" -}}
-        <!-- Gorilla Tag 2D Advertisement -->
-        <!-- <section>
-            <h2>Play my friend's new game</h2>
-            <iframe frameborder="0" src="https://itch.io/embed/2294740" scrolling="no" width="100%" height="167">
-                <a href="https://cormemory.itch.io/gorilla-tag-2d">Gorilla Tag 2D by CorMemory</a>
-            </iframe>
-            <p>Watch how he created the game <a href="https://www.youtube.com/watch?v=L85xl1DThn0">here</a>.</p>
-            <hr>
-        </section> -->
-
         {{- if ( where .Site.RegularPages.ByTitle "Section" "posts" ) }}
         {{ "<!-- Recent posts -->" | safeHTML }}
         <section>
@@ -29,9 +19,9 @@
         {{ end }}
 
         {{- if ( where .Site.RegularPages.ByTitle "Section" "projects" ) }}
-        {{ "<!-- Software projects -->" | safeHTML }}
+        {{ "<!-- Projects -->" | safeHTML }}
         <section>
-            <h2>Software projects</h2>
+            <h2>Projects</h2>
             <nav>
                 <ul>
                     {{- range (and (where .Site.RegularPages "Section" "projects") (where .Site.RegularPages ".Params.Deprecated" false) | first 5) }}
@@ -70,7 +60,7 @@
                 <li>Nintendo Switch - <code>SW-1733-0857-8496</code></li>
                 <li>Nintendo 3DS - <code>2896-4199-2111</code></li>
                 <li>Nintendo Wii <small>(Wiimmfi)</small> - <code>6771-0364-9107-5373</code></li>
-                <li>Steam - <a href="https://steamcommunity.com/id/garrhow/">mersh</a></li>
+                <li>Steam - <a href="https://steamcommunity.com/id/garrhow/">mersh</a> <small>(I don't use Steam much...)</small></li>
                 <li>Xbox Live - <a href="https://account.xbox.com/en-us/profile?gamertag=ghoward007">ghoward007</a></li>
             </ul>
             {{ with ref . "games" }}<p>I also have a list of the games that I have played <a href="{{ . }}">here</a> if you want to read it, but the list is incomplete right now.</p>{{ end }}

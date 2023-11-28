@@ -8,6 +8,7 @@ title: "Half-Life"
 release_date: 1998-11-19
 platforms:
 - "Steam"
+- "Sega Dreamcast"
 developers: 
 - "Valve"
 publishers:

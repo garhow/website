@@ -18,7 +18,6 @@ played: true
 play_date: 2017-12-25
 completed: true
 mastered: false
-mastery_date: 2023-08-29
 rating: 10
 ---
 

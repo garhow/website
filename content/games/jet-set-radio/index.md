@@ -21,3 +21,10 @@ mastered: false
 rating: 9 # out of 10
 ---
 
+## Tips
+
+### Speed tagging
+
+This is a great way to finish levels faster, but if you're going for Jet ranking, *don't do this!* It will lower your score.
+
+{{< video src="tricks/speed_tagging.mp4" type="video/mp4" >}}
