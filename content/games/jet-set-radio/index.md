@@ -23,6 +23,14 @@ rating: 9 # out of 10
 
 ## Tips
 
+### Jet ranking
+
+To get a Jet ranking in most levels, the following is crucial:
+
+- A high-score character like Gum, Yo-Yo, or Goji Rokakku.
+- Completing all tags perfectly with few to no interruptions
+- Completing the level quickly
+
 ### Speed tagging
 
 This is a great way to finish levels faster, but if you're going for Jet ranking, *don't do this!* It will lower your score.
