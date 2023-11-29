@@ -22,3 +22,10 @@ rating: 8
 ---
 
 This is the Japanese version of Animal Crossing for GameCube, which in itself is an enhanced port of Doubutsu no Mori for Nintendo 64.
+
+## Regional Differences
+
+- There is a shrine rather than a fountain in every village.
+- The post office looks very different.
+- Tom Nook's outfits are different.
+- There is no way to get dark skin in the game by tanning.

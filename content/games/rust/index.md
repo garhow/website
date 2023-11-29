@@ -16,6 +16,7 @@ publishers:
 genres: ["survival"]
 played: true
 mastered: false
-rating: 8 # out of 10
+rating: 6 # out of 10
 ---
 
+I just never got into this game. It takes sooooooooo long to even load into the game and even longer to connect to a server, and most servers frequently reset, making any time that I put into the game basically meaningless. I guess I just don't *get* Rust. Even worse, the anti-cheat prevents you from connecting to most servers on Linux, so I have even less reason to want to play the game.
