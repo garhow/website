@@ -45,7 +45,7 @@
 
         {{ "<!-- Cover art -->" | safeHTML }}
         {{ with .Resources.Get "cover" -}}
-            {{- $image := (.Resize "x160").Fill "120x160 center" -}}
+            {{- $image := (.Resize "x360").Fill "360x480 center" -}}
             <img class="media-cover" src="{{ $image.RelPermalink }}" alt="An image of the game's cover art"></img>
         {{- end }}
 {{ end }}

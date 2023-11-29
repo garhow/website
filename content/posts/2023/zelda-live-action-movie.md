@@ -12,4 +12,4 @@ The announcement also shared the fact that [Avi Arad](https://www.imdb.com/name/
 
 Also, the film is being co-financed by Sony Pictures. I just found that a little funny.
 
-Well... people thought the Mario movie was going to be a disaster, so hopefully this one will turn out the same.
+Well... people thought the Mario movie was going to be a disaster, so hopefully this one will turn out good as well.

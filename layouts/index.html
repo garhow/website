@@ -1,7 +1,7 @@
 {{ define "header" }}
 	<h1 align="center" style="color: var(--accent-color); font-size: min(max(14vw, 2em), 4em);">{{ .Site.Title }}</h1>
 	<hr>
-	<marquee style="color: var(--accent-color);">❄ merry christmas! i updated the website to be more festive... i also updated the games section and added some more of my recent projects to the lists. i'm currently documenting my halo 2 playthrough so remember to check out that page! tot ziens ❄</marquee>
+	<marquee style="color: var(--accent-color);">❄ merry christmas! i updated the website to be more festive... i also updated the games section and added some more of my recent projects to the lists. i'm currently documenting my halo 2 playthrough so be sure to check out that page! tot ziens ❄</marquee>
 {{ end }}
 
 {{ define "main" -}}
@@ -19,7 +19,7 @@
             <nav>
                 <ul>
                     {{ range (where .Site.RegularPages "Section" "posts") }}
-                        <li><span>{{ .PublishDate | time.Format "02 January 2006" }}</span> - <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                        <li><span>{{ .PublishDate | time.Format "2006-01-02" }}</span> - <a href="{{ .Permalink }}">{{ .Title }}</a></li>
                     {{ end }}
                 </ul>
             </nav>
