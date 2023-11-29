@@ -1,8 +1,8 @@
 /* Variables */
 :root {
-    --accent-color: seagreen;
+    --accent-color: #b71c1c /* seagreen */;
     --border-color: rgba(1, 1, 1, 0.1);
-    --dim-color: darkseagreen;
+    --dim-color: #e57373 /* darkseagreen */;
 }
 
 /* Fonts */
@@ -26,12 +26,22 @@ aside { float: right; }
 
 body {
     /* Set default background image */
-    background: /* url("images/green.png") */ conic-gradient(
+    
+    /* Default colors */
+    /* background: conic-gradient(
         var(--dim-color) 0.25turn,
         var(--accent-color) 0.25turn 0.5turn,
         var(--dim-color) 0.5turn 0.75turn,
         var(--accent-color) 0.75turn
-      ) top left / 64px 64px repeat;
+    ) top left / 64px 64px repeat; */
+
+    /* Holiday colors */
+    background: conic-gradient(
+        #f44336 0.25turn,
+        white 0.25turn 0.5turn,
+        #f44336 0.5turn 0.75turn,
+        #b71c1c 0.75turn
+    ) top left / 64px 64px repeat;
       
     /* Set background size */
     background-position: center 0px;
