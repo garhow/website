@@ -6,8 +6,8 @@ contentDir = 'content/'
 rssLimit = 20
 
 [author]
-	name = 'Garrett Howard'
-	email = 'garrett@mersh.com'
+    name = 'Garrett Howard'
+    email = 'garrett@mersh.com'
     github = 'garhow'
     sudomemo = '5C48A97065F1D04B@DSi'
 
