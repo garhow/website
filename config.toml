@@ -13,4 +13,5 @@ rssLimit = 20
 
 [params]
     description = 'Programming, games, and more'
+    message = "❄ merry christmas! i updated the website to be more festive... i also updated the games section and added some more of my recent projects to the lists. i'm currently documenting my halo 2 playthrough so be sure to check out that page! tot ziens ❄"
     source = 'https://github.com/garhow/website/'

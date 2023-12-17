@@ -1,17 +1,10 @@
 {{ define "header" }}
 	<h1 align="center" style="color: var(--accent-color); font-size: min(max(14vw, 2em), 4em);">{{ .Site.Title }}</h1>
 	<hr>
-	<marquee style="color: var(--accent-color);">❄ merry christmas! i updated the website to be more festive... i also updated the games section and added some more of my recent projects to the lists. i'm currently documenting my halo 2 playthrough so be sure to check out that page! tot ziens ❄</marquee>
+	<marquee style="color: var(--accent-color);">{{ .Site.Params.Message }}</marquee>
 {{ end }}
 
 {{ define "main" -}}
-        {{ "<!-- Welcome -->" | safeHTML }}
-	<section>
-	    <h2>¡Bienvenidos!</h2>
-	    <p>My name is Garrett Howard and this is my website, mersh.com. There's not much here right now but there will be more to come. As of now, I mainly just post recipes that I find, document games that I play, and occasionally write about tech or anything else that interests me..</p>
-	</section>
-	<hr>
-
         {{- if ( where .Site.RegularPages.ByTitle "Section" "posts" ) }}
         {{ "<!-- Recent posts -->" | safeHTML }}
         <section>
@@ -76,21 +69,6 @@
         </section>
 	<hr/>
 	{{ end }}
-
-        {{- if ( where .Site.RegularPages.ByTitle "Section" "travels" ) }}
-        {{ "<!-- Travels -->" | safeHTML }}
-        <section>
-            <h2>Travels</h2>
-            <nav>
-                <ul>
-                    {{- range (where .Site.RegularPages "Section" "travels" | first 10) }}
-                    <li><span>{{ .PublishDate | time.Format "January 2006" }}</span> - <a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                    {{- end }}
-                </ul>
-            </nav>
-        </section>
-	<hr/>
-        {{ end }}
 
         {{ "<!-- Miscellaneous -->" | safeHTML }}
         <section>
