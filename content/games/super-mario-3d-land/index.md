@@ -17,7 +17,7 @@ genres: ["platformer", "action-adventure"]
 played: true
 # play_date: 2023-12-17
 completed: false
-# completion_date: 2023-12-17
+completion_date: 2023-12-17
 mastered: false
 # mastery_date: 2023-12-17
 rating: 9 # out of 10
