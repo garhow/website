@@ -18,7 +18,8 @@ played: true
 play_date: 2023-09-24
 completed: true
 completion_date: 2023-11-25
-mastered: false
+mastered: true
+mastery_date: 2023-11-25
 rating: 10 # out of 10
 ---
 
