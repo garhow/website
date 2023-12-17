@@ -1,4 +1,5 @@
 {{ define "main" }}
+  {{ .Content }}
   <div class="media-grid">
     {{ range sort .Pages "Params.Release_Date" "desc" -}}
       {{ printf "<!-- %s -->" .Title | safeHTML }}
