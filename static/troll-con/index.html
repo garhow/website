@@ -3,7 +3,34 @@
 	<head>
 		<title>TROLL CON</title>
 		<style>
-			header, main { width: 500px; }
+			/* Fonts */
+			@font-face {
+				font-display: swap;
+				font-family: "Comic Relief";
+				font-weight: normal;
+				src: local("Comic Relief"), url(/fonts/comic-relief/ComicRelief.ttf) format("truetype");
+			}
+
+			@font-face {
+				font-display: swap;
+				font-family: "Comic Relief";
+				font-weight: bold;
+				src: local("Comic Relief Bold"), url(/fonts/comic-relief/ComicRelief-Bold.ttf) format("truetype");
+			}
+
+			body {
+				font-family: "Comic Relief";
+				background-image: url(./troll.gif);
+				background-size: 4em 4em;
+				margin: 0;
+				padding: 0;
+			}
+
+			#content {
+				background: white;
+				padding: 0px 1em;
+				width: 500px;
+			}
 			
 			fieldset {
 				margin: 2em 0;
@@ -27,7 +54,9 @@
 
 			dd { margin-bottom: 1em; }
 
-			#testimonials video { height: 128px; }
+			#news {	text-align: left; }
+
+			#testimonials video { border: dashed grey; height: 128px; }
 
 			#testimonials table { border-collapse: collapse; }
 			#testimonials tr { border: double grey; }
@@ -36,89 +65,116 @@
 	</head>
 	<body>
 		<center>
-			<header>
-				<div style="display: flex; justify-content: center; align-items: center;">
-					<img src="troll.gif" alt="Troll face" style="display: inline-block;" height="64px"></img>
-					<h1 style="display: inline-block;">TROLL CON</h1>
-					<img src="troll.gif" alt="Troll face" style="display: inline-block; transform: scaleX(-1);" height="64px"></img>
-				</div>
-				<marquee style="color: red;">IMPORTANT: due to unforseen circumstances related to EDP445, TROLL CON 2013 has been cancelled, and the event is being postponed to 2014.</marquee>
-				<br>
-				<br>
-				<nav>
-					<a href="#about">faq</a> &ndash;
-					<a href="#schedule">schedule</a> &ndash;
-					<a href="#testimonials">testimonials</a>
-				</nav>
-				<br>
-				<hr/>
-			</header>
-			<main>
-				<fieldset id="about">
-					<legend>faq</legend>
-					<dl>
-						<dt>what is troll con</dt>
-						<dd>troll con is an annual event where trolls from all around the world get devious.</dd>
-					
-						<dt>when does troll con take place</dt>
-						<dd>troll con takes place annually on new year's eve</dd>
-
-						<dt>how do i participate in troll con</dt>
-						<dd>as long as you are a troll and are prepared to get devious, you are welcome</dd>
-
-						<dt>who are you and what are you doing in my house</dt>
-						<dd>???</dd>
-
-						<dt>how do i register for troll con</dt>
-						<dd>you don't need to register, just show up</dd>
-
-						<dt>what kind of activities can i expect at troll con</dt>
-						<dd>troll con offers a variety of seminars and demonstrations covering the greatest trolling techniques and classes related to the art of deviousness</dd>
-
-						<dt>can we do a little trolling</dt>
-						<dd>of course</dd>
-
-						<dt>is dream allowed</dt>
-						<dd>no</dd>
-
-					</dl>
-				</fieldset>
-				<fieldset id="schedule">
-					<legend>schedule</legend>
-					<i>December 2014</i>
-					<img src="calendar.gif" width="400px"></img><br><br>
-					<b>TROLL CON 2014 will be held on December 31, 2014.</b>
-				</fieldset>
-				<fieldset id="testimonials">
-					<legend>testimonials</legend>
-					<table>
-						<tr>
-							<td>
-								<video src="videos/cor.mp4" controls></video>
-							</td>
-							<td>
-								<blockquote>
-									<p>2012 TROLL CON was almost too devious.</p>
-								</blockquote>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<blockquote>
-									<p>TROLL CON 2012 was a blast. It got devious.</p>
-								</blockquote>
-							</td>
-							<td>
-								<video src="videos/gar.mp4" controls></video>
-							</td>
-						</tr>
-					</table>
-				</fieldset>
-			</main>
+			<div id="content">
+				<header>
+					<div style="display: flex; justify-content: center; align-items: center;">
+						<img src="troll.gif" alt="Troll face" style="display: inline-block;" height="64px"></img>
+						<h1 style="display: inline-block;">TROLL CON</h1>
+						<img src="troll.gif" alt="Troll face" style="display: inline-block; transform: scaleX(-1);" height="64px"></img>
+					</div>
+					<marquee style="color: red;">IMPORTANT: due to unforseen circumstances related to EDP445, TROLL CON 2013 has been cancelled, and the event is being postponed to 2014.</marquee>
+					<br>
+					<br>
+					<nav>
+						<a href="#news">news</a> &ndash;
+						<a href="#about">faq</a> &ndash;
+						<a href="#schedule">schedule</a> &ndash;
+						<a href="#testimonials">testimonials</a>
+					</nav>
+					<br>
+					<hr/>
+				</header>
+				<main>
+					<fieldset id="news">
+						<legend>news</legend>
+						<article>
+							<header>
+								<h3>TROLL CON 2013 cancelled</h3>
+							</header>
+							<p>due to recent incidents related to <a href="https://www.edp445.com/">EDP445</a>, we have had no choice but to cancel TROLL CON 2013 and postpone the event to 2014. we are deeply sorry and hope to see you all at TROLL CON 2014</p>
+						</article>
+						<hr/>
+						<article>
+							<header>
+								<h3>the latest and greatest in trolling: XboxAddictionz</h3>
+							</header>
+							<p>herobrine trolling has reached new heights thanks to youtuber XboxAddictionz.</p>
+							<iframe width="100%" height="315" src="https://www.youtube.com/embed/snEYkqHyeLM?si=NOmjXXs-unc2FROn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</article>
+						<hr/>
+						<article>
+							<header>
+								<h3>TROLL CON 2012 recap</h3>
+							</header>
+							<p>TROLL CON 2012 was a huge success. it got very devious.. and trolling has peaked</p>
+						</article>
+					</fieldset>
+					<fieldset id="about">
+						<legend>faq</legend>
+						<dl>
+							<dt>what is troll con</dt>
+							<dd>troll con is an annual event where trolls from all around the world get devious.</dd>
+						
+							<dt>when does troll con take place</dt>
+							<dd>troll con takes place annually on new year's eve</dd>
+	
+							<dt>how do i participate in troll con</dt>
+							<dd>as long as you are a troll and are prepared to get devious, you are welcome</dd>
+	
+							<dt>who are you and what are you doing in my house</dt>
+							<dd>???</dd>
+	
+							<dt>how do i register for troll con</dt>
+							<dd>you don't need to register, just show up</dd>
+	
+							<dt>what kind of activities can i expect at troll con</dt>
+							<dd>troll con offers a variety of seminars and demonstrations covering the greatest trolling techniques and classes related to the art of deviousness</dd>
+	
+							<dt>can we do a little trolling</dt>
+							<dd>of course</dd>
+	
+							<dt>is dream allowed</dt>
+							<dd>no</dd>	
+	
+						</dl>
+					</fieldset>
+					<fieldset id="schedule">
+						<legend>schedule</legend>
+						<i>December 2014</i>
+						<img src="calendar.gif" width="400px"></img><br><br>
+						<b>TROLL CON 2014 will be held on December 31, 2014.</b>
+					</fieldset>
+					<fieldset id="testimonials">
+						<legend>testimonials</legend>
+						<table>
+							<tr>
+								<td>
+									<video src="videos/cor.mp4" controls></video>
+								</td>
+								<td>
+									<blockquote>
+										<p>2012 TROLL CON was almost too devious.</p>
+									</blockquote>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<blockquote>
+										<p>TROLL CON 2012 was a blast. It got devious.</p>
+									</blockquote>
+								</td>
+								<td>
+									<video src="videos/gar.mp4" controls></video>
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+				</main>
 				<footer>
-					<img src="dance.gif"></img>
-					<p>&copy; copyright troll con 2009-2014</p>
+					<img src="dance.gif"></img><br>
+					<b>&copy; copyright troll con 2009-2014</b><br><br>
 				</footer>
+			</div>
 		</center>
 	</body>
 </html>
