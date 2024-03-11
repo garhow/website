@@ -9,9 +9,10 @@ rssLimit = 20
     name = 'Garrett Howard'
     email = 'garrett@mersh.com'
     github = 'garhow'
+    linkedin = 'garhow'
     sudomemo = '5C48A97065F1D04B@DSi'
 
 [params]
     description = 'Programming, games, and more'
-    message = "❄ merry christmas! i updated the website to be more festive... i also updated the games section and added some more of my recent projects to the lists. i'm currently documenting my halo 2 playthrough so be sure to check out that page! tot ziens ❄"
+    message = "expect a couple of changes to this website within the next few weeks..."
     source = 'https://github.com/garhow/website/'

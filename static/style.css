@@ -1,11 +1,25 @@
 /* Variables */
 :root {
-    --accent-color: #b71c1c /* seagreen */;
+    --accent-color: seagreen;
     --border-color: rgba(1, 1, 1, 0.1);
-    --dim-color: #e57373 /* darkseagreen */;
+    --dim-color: darkseagreen;
 }
 
 /* Fonts */
+@font-face {
+    font-display: swap;
+    font-family: "Authentic Signature";
+    font-weight: normal;
+    src: local("Authentic Signature"), url(fonts/authentic-signature/AuthenticSignature.otf) format("opentype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Quikhand";
+    font-weight: normal;
+  src: local("Quikhand"), url(fonts/quikhand/Quikhand.ttf) format("truetype");
+}
+
 @font-face {
     font-display: swap;
     font-family: "Comic Relief";
@@ -25,24 +39,14 @@ a { color: var(--accent-color); }
 aside { float: right; }
 
 body {
-    /* Set default background image */
-    
-    /* Default colors */
-    /* background: conic-gradient(
+    /* Set default background image */    
+    background: conic-gradient(
         var(--dim-color) 0.25turn,
         var(--accent-color) 0.25turn 0.5turn,
         var(--dim-color) 0.5turn 0.75turn,
         var(--accent-color) 0.75turn
-    ) top left / 64px 64px repeat; */
-
-    /* Holiday colors */
-    background: conic-gradient(
-        #f44336 0.25turn,
-        white 0.25turn 0.5turn,
-        darkgreen 0.5turn 0.75turn,
-        #b71c1c 0.75turn
     ) top left / 64px 64px repeat;
-      
+
     /* Set background size */
     background-position: center 0px;
 
@@ -51,7 +55,7 @@ body {
 
     /* Set font family */
     font-family: "Comic Relief", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: larger;
+    font-size: large;
 
     line-height: 1.6;
 
@@ -64,6 +68,7 @@ body {
 figure img { border-radius: 0.5rem; width: 100%; }
 
 figcaption p { margin: 0; }
+
 
 h1 {
     margin: 0px;
@@ -176,3 +181,6 @@ a .media-cover:hover { opacity: 0.6 }
 }
 
 .warning { color: red; font-weight: bold; }
+
+.socials { float: right; }
+.socials a { display: inline-block; font-size: 1.5em; }

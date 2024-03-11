@@ -1,10 +1,10 @@
 ---
 draft: false
 date: 2023-11-05T01:38:23-06:00
-title: "My Experience Using OpenBSD 7.3 on the Raspberry Pi 4"
+title: "Running OpenBSD 7.3 on the Raspberry Pi 4"
 ---
 
-A few months ago, I decided to rebuild my email and web server using [OpenBSD](https://www.openbsd.org/) because I appreciate its focus on security, stability, and correctness, which are things that I prioritize in a server, especially one that handles something as important as email. I also really love [OpenSMTPD](https://www.opensmtpd.org/) and [httpd](https://man.openbsd.org/httpd.8), and OpenBSD bundles them with the install. I used a Raspberry Pi 4B for the server and it worked out really well!
+A few months ago, I decided to rebuild my email and web server using [OpenBSD](https://www.openbsd.org/) because of its focus on security, stability, and correctness, which are things that I prioritize in a server, especially one that handles something as important as email. I also really love [OpenSMTPD](https://www.opensmtpd.org/) and [httpd](https://man.openbsd.org/httpd.8), and OpenBSD bundles them with the install. I used a Raspberry Pi 4B for the server and it worked out really well!
 
 ## Installation
 
