@@ -1,7 +1,5 @@
 {{ define "header" }}
 	<h1 align="center" style="color: var(--accent-color); font-size: min(max(14vw, 2em), 4em);">{{ .Site.Title }}</h1>
-	<hr>
-	<marquee style="color: var(--accent-color);">{{ .Site.Params.Message }}</marquee>
 {{ end }}
 
 {{ define "main" -}}
@@ -40,7 +38,6 @@
         {{ "<!-- Recipes -->" | safeHTML }}
         <section>
             <h2>Recipes</h2>
-            <p>The recipes that I host on my site are vegan, gluten-free, soy-free, and oil-free. Here are some of the latest recipes that I have added to the site:</p>
             <nav>
                 <ul>
                     {{- range (where .Site.RegularPages "Section" "recipes" | first 5) }}
@@ -50,22 +47,5 @@
             </nav>
             {{ with ref . "recipes" }}<p>You can find a full collection of these recipes <a href='{{ . }}'>here</a>.</p>{{ end }}
         </section>
-	<hr/>
         {{ end }}
-
-        {{- if ( where .Site.RegularPages.ByTitle "Section" "games" ) }}
-        {{ "<!-- Games -->" | safeHTML }}
-        <section>
-            <h2>Games</h2>
-            <p>I play video games when I find the time. If you want to play with me, feel free to add me on the following platforms:</p>
-            <ul>
-                <li>Nintendo Switch - <code>SW-1733-0857-8496</code></li>
-                <li>Nintendo 3DS - <code>2896-4199-2111</code></li>
-                <li>Nintendo Wii <small>(Wiimmfi)</small> - <code>6771-0364-9107-5373</code></li>
-                <li>Steam - <a href="https://steamcommunity.com/id/garrhow/">garrhow</a></li>
-                <li>Xbox Live - <a href="https://account.xbox.com/en-us/profile?gamertag=ghoward007">ghoward007</a></li>
-            </ul>
-            {{ with ref . "games" }}<p>I also have a list of the games that I have played <a href="{{ . }}">here</a> if you want to read it, but the list is incomplete right now.</p>{{ end }}
-        </section>
-	{{ end }}
 {{ end }}
