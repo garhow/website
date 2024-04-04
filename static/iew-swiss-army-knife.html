@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IEW Swiss Army Knife</title>
+        <meta name="description" content="Tool for revising IEW composition writing assignments.">
+        <meta name="author" content="Garrett Howard">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            mark {
+                background-color: lightcoral;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>IEW Swiss Army Knife</h1>
+        </header>
+        <body>
+            <button onclick="check_for_passive_verbs()">Passive verbs</button>
+            <button onclick="check_for_contractions()">Contractions</button>
+            <button onclick="check_for_conjunction_openers()">Conjunctions used as sentence openers</button>
+            <hr />
+            <div id="input" style="border: 1px groove black;" contenteditable="true"></div>
+        </body>
+    </body>
+    <script type="text/javascript">
+        const input = document.getElementById("input");
+        
+        const passiveVerbs = ["am", "are", "is", "was", "were", "be", "being", "been"]
+
+        const coordinatingConjunctions = ["for", "and", "nor", "but", "or", "yet", "so"];
+
+        function check_for_passive_verbs() {
+            passiveVerbs.forEach((verb) => {
+                input.innerHTML = unpad(pad(input.innerHTML).replaceAll(
+                    new RegExp("(\\W|\\s)(" + verb + ")(\\W|\\s)", "gi"),
+                    "$1<mark>$2</mark>$3"
+                ));
+            });
+        }
+
+        function check_for_contractions() {
+            input.innerHTML = input.innerHTML.replaceAll("'", "<mark>'</mark>");
+        }
+
+        function check_for_conjunction_openers() {
+            coordinatingConjunctions.forEach((conjunction) => {
+                input.innerHTML = unpad(pad(input.innerHTML).replaceAll(
+                    new RegExp("(\\W|\\s)(" + capitalizeFirstLetter(conjunction) + ")(\\W|\\s)", "g"),
+                    "$1<mark>$2</mark>$3"
+                ));
+            });
+        }
+
+        function pad(string) {
+            return " " + string;
+        }
+
+        function unpad(string) {
+            return string.slice(1)
+        }
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+    </script>
+</html>
