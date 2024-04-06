@@ -11,13 +11,6 @@ prep_time: 10 # in minutes
 cook_time: 15 # in minutes
 ---
 
----
-title: "Peanut Butter Cookies"
-yield: "Takes 25 minutes and makes 20-24 cookies"
-date: 2023-08-10T07:40:49-05:00
-draft: false
----
-
 ## Ingredients
 - 1 cup peanut butter, creamy or crunchy
 - 1 cup date sugar
