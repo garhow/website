@@ -6,13 +6,16 @@ contentDir = 'content/'
 rssLimit = 20
 
 [author]
-    name = 'Garrett Howard'
-    email = 'garrett@mersh.com'
-    github = 'garhow'
-    linkedin = 'garhow'
-    sudomemo = '5C48A97065F1D04B@DSi'
 
 [params]
     description = 'Programming, games, and more'
     message = "expect a couple of changes to this website within the next few weeks..."
     source = 'https://github.com/garhow/website/'
+    [params.author]
+        name = 'Garrett Howard'
+        email = 'garrett@mersh.com'
+        github = 'garhow'
+        linkedin = 'garhow'
+        mastodon = 'https://mastodon.social/@garhow'
+        sudomemo = '5C48A97065F1D04B@DSi'
+        

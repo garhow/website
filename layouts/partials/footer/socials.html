@@ -1,5 +1,6 @@
 <nav class="socials">
-                {{ with .Site.Author.email }}<a class="fa-solid fa-square-envelope" href="mailto:{{ . }}"></a></li>{{ end }}
-                {{ with .Site.Author.github }}<a class="fa-brands fa-square-github" href="https://www.github.com/{{ . }}"></a></li>{{ end }}
-		{{ with .Site.Author.linkedin }}<a class="fa-brands fa-linkedin" href="https://www.linkedin.com/in/{{ . }}"></a>{{ end }}
+                {{ with .Site.Params.Author.email }}<a class="fa-solid fa-square-envelope" href="mailto:{{ . }}"></a>{{ end }}
+                {{ with .Site.Params.Author.github }}<a class="fa-brands fa-square-github" href="https://www.github.com/{{ . }}"></a>{{ end }}
+		{{ with .Site.Params.Author.linkedin }}<a class="fa-brands fa-linkedin" href="https://www.linkedin.com/in/{{ . }}"></a>{{ end }}
+		{{ with .Site.Params.Author.mastodon }}<a class="fa-brands fa-mastodon" style="text-decoration: none;" rel="me" href="{{ . }}"></a>{{ end }}
 </nav>
