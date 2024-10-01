@@ -15,7 +15,6 @@
 			h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
 			main {
 				display: flex;
-				margin: 0.5em 0;
 				flex-flow: row wrap;
 			}
 			.video-container {
@@ -24,14 +23,17 @@
 				text-align: left;
 				padding: 1em 1em;
 				justify-content: center;
-				align-items: left;
 				flex-shrink: 2;
 				flex-grow: 2;
 				flex-basis: 30%;
 			}
+			@media (max-width: 768px) {
+				.video-container { flex-basis: 100%; }
+			}
 			.video-container video {
 				box-shadow: 0px 4px 8px rgba(0.0, 0.0, 0.0, 0.3);
 				border-radius: 8px;
+				width: 100%;
 			}
 		</style>
 		<script src="js/hls.js"></script>
