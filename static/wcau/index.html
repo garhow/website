@@ -2,33 +2,52 @@
 <html>
 	<head>
 		<title>WCAU monitor</title>
-		<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+		<style>
+			a { color: red; text-decoration: none; }
+			body {
+				font-family: sans-serif;
+				margin: auto;
+				max-width: 600px;
+				padding: 1em 0;
+				text-align: center;
+			}
+			h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
+			video {
+				margin: 1em 0;
+				max-width: 100%;
+			}
+		</style>
+		<script src="js/hls.js"></script>
 	</head>
 	<body>
 		<header>
 			<h1>WCAU monitor</h1>
+			<i>Live feed of WCAU office in Whatcom County, WA</i>
 		</header>
 		<main>
-			<video id="video"></video>
+			<video id="el1" autoplay controls></video>
+			<video id="el2" autoplay controls></video>
+			<video id="el3" autoplay controls></video>
+			<video id="el4" autoplay controls></video>
+			<video id="el5" autoplay controls></video>
 		</main>
+		<footer>
+			<small>Powered by <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>, <a href="https://ffmpeg.org/">ffmpeg</a>, and <a href="https://github.com/arut/nginx-rtmp-module">nginx-rtmp-module</a>.</small>
+		</footer>
+		<script>
+			var streams = ['el1', 'el2', 'el3', 'el4', 'el5']
+
+			for (i in streams) {
+				var video = document.getElementById(streams[i]);			
+				var videoSrc = ('https://www.mersh.com/hls/' + streams[i] + '.m3u8')
+				if (Hls.isSupported()) {
+					var hls = new Hls();
+					hls.loadSource(videoSrc);
+					hls.attachMedia(video);
+				} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+					video.src = videoSrc;
+				}
+			}
+		</script>
 	</body>
-	<script>
-  var video = document.getElementById('video');
-  var videoSrc = 'https://www.mersh.com/wcau/el0.m3u8';
-  if (Hls.isSupported()) {
-    var hls = new Hls();
-    hls.loadSource(videoSrc);
-    hls.attachMedia(video);
-  }
-  // HLS.js is not supported on platforms that do not have Media Source
-  // Extensions (MSE) enabled.
-  //
-  // When the browser has built-in HLS support (check using `canPlayType`),
-  // we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video
-  // element through the `src` property. This is using the built-in support
-  // of the plain video element, without using HLS.js.
-  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = videoSrc;
-  }
-</script>
 </html>
