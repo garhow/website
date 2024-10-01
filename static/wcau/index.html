@@ -2,19 +2,36 @@
 <html>
 	<head>
 		<title>WCAU monitor</title>
+		<link rel="icon" href="icon.png">
 		<style>
 			a { color: red; text-decoration: none; }
 			body {
 				font-family: sans-serif;
 				margin: auto;
-				max-width: 600px;
+				max-width: 90vw;
 				padding: 1em 0;
 				text-align: center;
 			}
 			h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
-			video {
-				margin: 1em 0;
-				max-width: 100%;
+			main {
+				display: flex;
+				margin: 0.5em 0;
+				flex-flow: row wrap;
+			}
+			.video-container {
+				display: flex;
+				flex-flow: column;
+				text-align: left;
+				padding: 1em 1em;
+				justify-content: center;
+				align-items: left;
+				flex-shrink: 2;
+				flex-grow: 2;
+				flex-basis: 30%;
+			}
+			.video-container video {
+				box-shadow: 0px 4px 8px rgba(0.0, 0.0, 0.0, 0.3);
+				border-radius: 8px;
 			}
 		</style>
 		<script src="js/hls.js"></script>
@@ -25,11 +42,26 @@
 			<i>Live feed of WCAU office in Whatcom County, WA</i>
 		</header>
 		<main>
-			<video id="el1" autoplay controls></video>
-			<video id="el2" autoplay controls></video>
-			<video id="el3" autoplay controls></video>
-			<video id="el4" autoplay controls></video>
-			<video id="el5" autoplay controls></video>
+			<div class="video-container">
+				<h2>WCAU EL1</h2>
+				<video id="el1" autoplay controls></video>
+			</div>
+			<div class="video-container">
+				<h2>WCAU EL2</h2>
+				<video id="el2" autoplay controls></video>
+			</div>
+			<div class="video-container">
+				<h2>WCAU EL3</h2>
+				<video id="el3" autoplay controls></video>
+			</div>
+			<div class="video-container">
+				<h2>WCAU EL4</h2>
+				<video id="el4" autoplay controls></video>
+			</div>
+			<div class="video-container">
+				<h2>WCAU EL5</h2>
+				<video id="el5" autoplay controls></video>
+			</div>
 		</main>
 		<footer>
 			<small>Powered by <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>, <a href="https://ffmpeg.org/">ffmpeg</a>, and <a href="https://github.com/arut/nginx-rtmp-module">nginx-rtmp-module</a>.</small>
