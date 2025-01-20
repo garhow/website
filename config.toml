@@ -8,7 +8,7 @@ rssLimit = 20
 [author]
 
 [params]
-    description = 'Programming, games, and more'
+    description = "Garrett Howard's personal site"
     message = "expect a couple of changes to this website within the next few weeks..."
     source = 'https://github.com/garhow/website/'
     [params.author]
@@ -16,6 +16,5 @@ rssLimit = 20
         email = 'garrett@mersh.com'
         github = 'garhow'
         linkedin = 'garhow'
-        mastodon = 'https://mastodon.social/@garhow'
         sudomemo = '5C48A97065F1D04B@DSi'
         
