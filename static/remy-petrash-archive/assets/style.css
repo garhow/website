@@ -1,0 +1,47 @@
+body {
+	font-family: "Inter Variable", "Helvetica", "Arial", sans-serif;
+	margin: auto;
+	max-width: 600px;
+	text-align: center;
+}
+
+footer {
+	border-top: 1px solid #bbb;
+}
+
+footer, header, main {
+	padding: 1em 0;
+}
+
+header {
+	border-bottom: 1px solid #bbb;
+}
+
+marquee {
+	background: black;
+	color: white;
+	padding-top: 4px;
+}
+
+header nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	display: inline-block;
+	margin: 0 1em;
+}
+
+.title {
+	font-size: 2em;
+	font-weight: bold;
+	height: 2em;
+}
+
+.title img {
+	height: 100%;
+	margin: 0 0.4em;
+	vertical-align: middle;
+}
