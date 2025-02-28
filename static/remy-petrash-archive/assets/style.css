@@ -35,13 +35,13 @@ header nav ul li {
 }
 
 .title {
-	font-size: 2em;
+	font-size: 1.8em;
 	font-weight: bold;
-	height: 2em;
+	height: 1.8em;
 }
 
 .title img {
 	height: 100%;
-	margin: 0 0.4em;
+	margin: 0 0.2em;
 	vertical-align: middle;
 }
